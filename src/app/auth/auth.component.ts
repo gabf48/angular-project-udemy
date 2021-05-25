@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { NgForm } from "@angular/forms";
+import { onErrorResumeNext } from "rxjs";
 import { AuthService } from "./auth.service";
 
 @Component({
@@ -39,10 +40,10 @@ export class AuthComponent {
             console.log(resData);
             this.isLoading = false;
         }, 
-        error => {
-           console.log(error); 
-           this.error = 'An error occured';
-           this.isLoading = false;
+        errorMessage => {
+           console.log(errorMessage); 
+            this.error = errorMessage;
+            this.isLoading = false;  
         }
         );
     }   
