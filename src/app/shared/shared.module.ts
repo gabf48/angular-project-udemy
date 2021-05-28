@@ -1,3 +1,4 @@
+import { LoggingService } from './../logging.service';
 import { DropdownDirective } from './dropdown.directive';
 import { PlaceholderDirective } from './placeholder/placeholder.directive';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
@@ -22,8 +23,7 @@ import { CommonModule } from '@angular/common';
         DropdownDirective,
         CommonModule
     ],
-    entryComponents: [
-        AlertComponent
-      ]
+    entryComponents: [AlertComponent],
+    providers: [LoggingService]
 })
 export class SharedModule {}
