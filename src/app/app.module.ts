@@ -1,3 +1,4 @@
+import { LoggingService } from './logging.service';
 import { SharedModule } from './shared/shared.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,7 +22,8 @@ import { CoreModule } from './core.module';
     CoreModule
   ],
  
-      bootstrap: [AppComponent]
+      bootstrap: [AppComponent],
+//      providers: [LoggingService]
     
 })
 export class AppModule { }
