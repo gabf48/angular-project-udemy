@@ -1,6 +1,4 @@
-import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
-import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -19,8 +17,6 @@ import { CoreModule } from './core.module';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    ShoppingListModule,
-    AuthModule,
     SharedModule,
     CoreModule
   ],
